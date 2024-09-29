@@ -1,11 +1,11 @@
 // import Image from "next/image";
-import { LandingPageDark } from "../components/landing-page-dark";
+import {PortfolioTrackingComponent} from "@/components/portfolio-tracking";
 
 
 export default function Home() {
   return (
     <div className="">
-          <LandingPageDark />
+          <PortfolioTrackingComponent />
     </div>
       );
 }

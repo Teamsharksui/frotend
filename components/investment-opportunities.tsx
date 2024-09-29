@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
 import { ArrowRightIcon } from 'lucide-react'
-import LayoutDarkGreen from './layout-dark-green'
+import {LayoutDarkGreenComponent} from './layout-dark-green'
 
 const opportunities = [
   { id: 1, name: 'Vertical Farming Project', description: 'Innovative urban farming solution', fundingGoal: 500000, currentFunding: 350000, category: 'Agritech' },
@@ -18,10 +18,10 @@ const opportunities = [
 ]
 
 export function InvestmentOpportunitiesComponent() {
-  const [hoveredId, setHoveredId] = useState(null)
-
+  const [hoveredId, setHoveredId] = useState<number | null>(null)
+  
   return (
-    <LayoutDarkGreen>
+    <LayoutDarkGreenComponent>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -69,7 +69,6 @@ export function InvestmentOpportunitiesComponent() {
                       <Progress 
                         value={(opportunity.currentFunding / opportunity.fundingGoal) * 100} 
                         className="h-2 bg-gray-700" 
-                        indicatorClassName="bg-green-500" 
                       />
                     </motion.div>
                   </div>
@@ -94,6 +93,6 @@ export function InvestmentOpportunitiesComponent() {
           ))}
         </motion.div>
       </motion.div>
-    </LayoutDarkGreen>
+    </LayoutDarkGreenComponent>
   )
 }

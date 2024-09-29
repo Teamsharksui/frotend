@@ -100,15 +100,15 @@ export function LandingPageComponent() {
             <h2 className="text-3xl font-bold text-center mb-12">What Our Users Say</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-gray-100 p-6 rounded-lg">
-                <p className="italic mb-4">"ACTIVE-B helped me find the perfect job on a local organic farm. The platform is easy to use and full of opportunities!"</p>
+                <p className="italic mb-4">ACTIVE-B helped me find the perfect job on a local organic farm. The platform is easy to use and full of opportunities!</p>
                 <p className="font-semibold">- Sarah Johnson, Farm Worker</p>
               </div>
               <div className="bg-gray-100 p-6 rounded-lg">
-                <p className="italic mb-4">"As a farm owner, I've found reliable workers through ACTIVE-B. It's streamlined our hiring process significantly."</p>
+                <p className="italic mb-4">As a farm owner, I have found reliable workers through ACTIVE-B. It is streamlined our hiring process significantly.</p>
                 <p className="font-semibold">- Michael Brown, Farm Owner</p>
               </div>
               <div className="bg-gray-100 p-6 rounded-lg">
-                <p className="italic mb-4">"The marketplace on ACTIVE-B has expanded my customer base. It's a game-changer for small-scale producers like me."</p>
+                <p className="italic mb-4">The marketplace on ACTIVE-B has expanded my customer base. It is a game-changer for small-scale producers like me.</p>
                 <p className="font-semibold">- Emily Chen, Organic Farmer</p>
               </div>
             </div>

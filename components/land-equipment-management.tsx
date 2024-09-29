@@ -4,7 +4,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import LayoutDarkGreen from './layout-dark-green'
+import { LayoutDarkGreenComponent } from './layout-dark-green'
 
 const items = [
   { id: 1, name: 'North Field', type: 'Land', area: '50 acres', status: 'Available' },
@@ -17,7 +17,7 @@ const items = [
 
 export function LandEquipmentManagementComponent() {
   return (
-    <LayoutDarkGreen>
+    <LayoutDarkGreenComponent>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -68,6 +68,6 @@ export function LandEquipmentManagementComponent() {
           ))}
         </motion.div>
       </motion.div>
-    </LayoutDarkGreen>
+    </LayoutDarkGreenComponent>
   )
 }

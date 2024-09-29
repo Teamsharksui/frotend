@@ -4,8 +4,8 @@ import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { LineChart, Line, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
-import LayoutDarkGreen from './layout-dark-green'
+import { /*LineChart, Line,*/ AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
+import { LayoutDarkGreenComponent } from './layout-dark-green'
 
 const initialData = [
   { name: 'Jan', earnings: 4000, returns: 2400 },
@@ -36,7 +36,7 @@ export function PortfolioTrackingComponent() {
     return () => clearInterval(interval)
   }, [])
 
-  const handleTimeframeChange = (newTimeframe) => {
+  const handleTimeframeChange = (newTimeframe: React.SetStateAction<string>) => {
     setTimeframe(newTimeframe)
     // In a real application, you would fetch new data based on the timeframe
     // For this example, we'll just randomize the existing data
@@ -50,7 +50,7 @@ export function PortfolioTrackingComponent() {
   }
 
   return (
-    <LayoutDarkGreen>
+    <LayoutDarkGreenComponent>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -132,6 +132,6 @@ export function PortfolioTrackingComponent() {
           </motion.div>
         </div>
       </motion.div>
-    </LayoutDarkGreen>
+    </LayoutDarkGreenComponent>
   )
 }

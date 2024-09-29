@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { CheckIcon, XIcon } from 'lucide-react'
-import LayoutDarkGreen from './layout-dark-green'
+import { LayoutDarkGreenComponent } from './layout-dark-green'
 
 const products = [
   { id: 1, name: 'Organic Apples', seller: 'Green Farms', price: 2.99, status: 'Pending' },
@@ -18,7 +18,7 @@ const products = [
 
 export function ProductListingsManagementComponent() {
   return (
-    <LayoutDarkGreen>
+    <LayoutDarkGreenComponent>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -76,6 +76,6 @@ export function ProductListingsManagementComponent() {
           ))}
         </motion.div>
       </motion.div>
-    </LayoutDarkGreen>
+    </LayoutDarkGreenComponent>
   )
 }

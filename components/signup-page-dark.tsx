@@ -10,7 +10,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Textarea } from "@/components/ui/textarea"
 import Link from 'next/link'
-import LayoutDark from './layout-dark'
+import { LayoutDark } from './layout-dark'
 
 export function SignupPageDark() {
   const [currentTab, setCurrentTab] = useState("personal")
@@ -80,7 +80,7 @@ export function SignupPageDark() {
                         </SelectTrigger>
                         <SelectContent>
                           <SelectItem value="passport">Passport</SelectItem>
-                          <SelectItem value="driverLicense">Driver's License</SelectItem>
+                          <SelectItem value="driverLicense">Driver&apos;s License</SelectItem>
                           <SelectItem value="nationalId">National ID</SelectItem>
                         </SelectContent>
                       </Select>

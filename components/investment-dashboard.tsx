@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
 import { LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
-import LayoutDarkGreen from './layout-dark-green'
+import { LayoutDarkGreenComponent } from './layout-dark-green'
 
 const investmentData = [
   { name: 'Jan', returns: 4000, funding: 2400 },
@@ -27,7 +27,7 @@ const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042']
 
 export function InvestmentDashboardComponent() {
   return (
-    <LayoutDarkGreen>
+    <LayoutDarkGreenComponent>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -58,11 +58,7 @@ export function InvestmentDashboardComponent() {
                       animate={{ scaleX: 1 }}
                       transition={{ delay: 0.5 + index * 0.2, duration: 1 }}
                     >
-                      <Progress 
-                        value={Math.floor(Math.random() * 100)} 
-                        className="h-2 bg-gray-700" 
-                        indicatorClassName="bg-green-500" 
-                      />
+                    <Progress value={Math.floor(Math.random() * 100)} className="h-2 bg-gray-700" />
                     </motion.div>
                   </div>
                 ))}
@@ -143,6 +139,6 @@ export function InvestmentDashboardComponent() {
           </Card>
         </motion.div>
       </motion.div>
-    </LayoutDarkGreen>
+    </LayoutDarkGreenComponent>
   )
 }

@@ -1,15 +1,24 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { ArrowUpDown, Search } from 'lucide-react'
-import LayoutDarkGreen from './layout-dark-green'
+import { LayoutDarkGreenComponent } from './layout-dark-green'
 
-const transactions = [
+interface Transaction {
+  id: number
+  date: string
+  type: string
+  product: string
+  amount: number
+  status: string
+}
+
+const transactions: Transaction[] = [
   { id: 1, date: '2023-09-15', type: 'Sale', product: 'Organic Apples', amount: 500, status: 'Completed' },
   { id: 2, date: '2023-09-16', type: 'Purchase', product: 'Fertilizer', amount: 200, status: 'Pending' },
   { id: 3, date: '2023-09-17', type: 'Sale', product: 'Free-range Eggs', amount: 300, status: 'Completed' },
@@ -18,11 +27,11 @@ const transactions = [
 ]
 
 export function TransactionMonitoringComponent() {
-  const [sortColumn, setSortColumn] = useState('')
-  const [sortDirection, setSortDirection] = useState('asc')
+  const [sortColumn, setSortColumn] = useState<keyof Transaction>('date')
+  const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc')
   const [searchTerm, setSearchTerm] = useState('')
 
-  const handleSort = (column: string) => {
+  const handleSort = (column: keyof Transaction) => {
     if (column === sortColumn) {
       setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc')
     } else {
@@ -31,20 +40,24 @@ export function TransactionMonitoringComponent() {
     }
   }
 
-  const filteredTransactions = transactions.filter(transaction =>
-    Object.values(transaction).some(value =>
-      value.toString().toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredTransactions = useMemo(() => {
+    return transactions.filter(transaction =>
+      Object.values(transaction).some(value =>
+        value.toString().toLowerCase().includes(searchTerm.toLowerCase())
+      )
     )
-  )
+  }, [searchTerm])
 
-  const sortedTransactions = [...filteredTransactions].sort((a, b) => {
-    if (a[sortColumn] < b[sortColumn]) return sortDirection === 'asc' ? -1 : 1
-    if (a[sortColumn] > b[sortColumn]) return sortDirection === 'asc' ? 1 : -1
-    return 0
-  })
+  const sortedTransactions = useMemo(() => {
+    return [...filteredTransactions].sort((a, b) => {
+      if (a[sortColumn] < b[sortColumn]) return sortDirection === 'asc' ? -1 : 1
+      if (a[sortColumn] > b[sortColumn]) return sortDirection === 'asc' ? 1 : -1
+      return 0
+    })
+  }, [filteredTransactions, sortColumn, sortDirection])
 
   return (
-    <LayoutDarkGreen>
+    <LayoutDarkGreenComponent>
       <div className="container mx-auto px-4 py-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -82,56 +95,18 @@ export function TransactionMonitoringComponent() {
               <Table>
                 <TableHeader>
                   <TableRow>
-                    <TableHead className="text-green-300">
-                      <Button
-                        variant="ghost"
-                        onClick={() => handleSort('date')}
-                        className="text-green-300 hover:text-green-100"
-                      >
-                        Date
-                        <ArrowUpDown className="ml-2 h-4 w-4" />
-                      </Button>
-                    </TableHead>
-                    <TableHead className="text-green-300">
-                      <Button
-                        variant="ghost"
-                        onClick={() => handleSort('type')}
-                        className="text-green-300 hover:text-green-100"
-                      >
-                        Type
-                        <ArrowUpDown className="ml-2 h-4 w-4" />
-                      </Button>
-                    </TableHead>
-                    <TableHead className="text-green-300">
-                      <Button
-                        variant="ghost"
-                        onClick={() => handleSort('product')}
-                        className="text-green-300 hover:text-green-100"
-                      >
-                        Product
-                        <ArrowUpDown className="ml-2 h-4 w-4" />
-                      </Button>
-                    </TableHead>
-                    <TableHead className="text-green-300">
-                      <Button
-                        variant="ghost"
-                        onClick={() => handleSort('amount')}
-                        className="text-green-300 hover:text-green-100"
-                      >
-                        Amount
-                        <ArrowUpDown className="ml-2 h-4 w-4" />
-                      </Button>
-                    </TableHead>
-                    <TableHead className="text-green-300">
-                      <Button
-                        variant="ghost"
-                        onClick={() => handleSort('status')}
-                        className="text-green-300 hover:text-green-100"
-                      >
-                        Status
-                        <ArrowUpDown className="ml-2 h-4 w-4" />
-                      </Button>
-                    </TableHead>
+                    {['date', 'type', 'product', 'amount', 'status'].map((column) => (
+                      <TableHead key={column} className="text-green-300">
+                        <Button
+                          variant="ghost"
+                          onClick={() => handleSort(column as keyof Transaction)}
+                          className="text-green-300 hover:text-green-100"
+                        >
+                          {column.charAt(0).toUpperCase() + column.slice(1)}
+                          <ArrowUpDown className="ml-2 h-4 w-4" />
+                        </Button>
+                      </TableHead>
+                    ))}
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -150,6 +125,6 @@ export function TransactionMonitoringComponent() {
           </Card>
         </motion.div>
       </div>
-    </LayoutDarkGreen>
+    </LayoutDarkGreenComponent>
   )
 }

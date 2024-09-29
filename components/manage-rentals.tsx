@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { FilterIcon } from 'lucide-react'
-import LayoutDarkGreen from './layout-dark-green'
+import { LayoutDarkGreenComponent } from './layout-dark-green'
 
 const rentals = [
   { id: 1, type: 'Land', name: 'North Field', area: '50 acres', status: 'Active', endDate: '2023-12-31' },
@@ -22,7 +22,7 @@ export function ManageRentalsComponent() {
   const filteredRentals = filter === 'All' ? rentals : rentals.filter(rental => rental.type === filter)
 
   return (
-    <LayoutDarkGreen>
+    <LayoutDarkGreenComponent>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -112,6 +112,6 @@ export function ManageRentalsComponent() {
           ))}
         </motion.div>
       </motion.div>
-    </LayoutDarkGreen>
+    </LayoutDarkGreenComponent>
   )
 }

@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from 'next/link'
-import LayoutDark from './layout-dark'
+import  { LayoutDark } from './layout-dark'
 
 export function LoginPageDarkComponent() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -56,7 +56,7 @@ export function LoginPageDarkComponent() {
               Forgot password?
             </Link>
             <Link href="/signup" className="text-sm text-green-400 hover:text-green-300">
-              Don't have an account? Sign up
+              Don&apos;t have an account? Sign up
             </Link>
           </CardFooter>
         </Card>

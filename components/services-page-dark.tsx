@@ -4,9 +4,9 @@ import React from 'react'
 import Image from 'next/image'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import LayoutDark from './layout-dark'
+import { LayoutDark } from './layout-dark'
 
-export function ServicesPageDarkComponent() {
+export function ServicesPageDark() {
   return (
     <LayoutDark>
       <div className="min-h-screen bg-gray-900 text-green-300 py-12 px-4 sm:px-6 lg:px-8">

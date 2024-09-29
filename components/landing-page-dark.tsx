@@ -3,26 +3,26 @@
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { DarkLayout } from "./page-layout"
+// import { DarkLayout } from "./page-layout"
 import { Leaf, Users, ShoppingCart, Phone, Mail, MapPin } from "lucide-react"
 import Link from "next/link"
-import { useRouter } from "next/router"
+// import { useRouter } from "next/router"
 
 export function LandingPageDark() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-900 text-gray-100">
       <header className="bg-gray-800 py-4">
         <div className="container mx-auto px-4 flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold text-green-400">ACTIVE-B</Link>
+          <Link href="/landing-page-dark" className="text-2xl font-bold text-green-400">ACTIVE-B</Link>
           <nav className="hidden md:flex space-x-4">
             <Link href="#features" className="hover:text-green-400">Features</Link>
-            <Link href="#services" className="hover:text-green-400">Services</Link>
-            <Link href="#about" className="hover:text-green-400">About</Link>
-            <Link href="#contact" className="hover:text-green-400">Contact</Link>
+            <Link href='/services-page-dark' className="hover:text-green-400">Services</Link>
+            <Link href="/about" className="hover:text-green-400">About</Link>
+            <Link href="/contact" className="hover:text-green-400">Contact</Link>
           </nav>
           <div className="space-x-2">
-            <Button variant="outline" className="text-green-400 border-green-400 hover:bg-green-400 hover:text-gray-900"><Link href="/page-layout">Log In</Link></Button>
-            <Button className="bg-green-500 hover:bg-green-400 text-gray-900">Sign Up</Button>
+            <Button variant="outline" className="text-green-400 border-green-400 hover:bg-green-400 hover:text-gray-900"><Link href="/login">Log In</Link></Button>
+            <Button className="bg-green-500 hover:bg-green-400 text-gray-900"><Link href="/signup">Sign Up</Link></Button>
           </div>
         </div>
       </header>
@@ -32,7 +32,7 @@ export function LandingPageDark() {
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-4">Connect with Agriculture</h1>
             <p className="text-xl mb-8">Find jobs, hire labor, and trade agricultural products all in one place</p>
-            <Button className="bg-green-500 hover:bg-green-400 text-gray-900 text-lg px-8 py-3">Get Started</Button>
+            <Button className="bg-green-500 hover:bg-green-400 text-gray-900 text-lg px-8 py-3"><Link href="/signup">Get Started</Link></Button>
           </div>
         </section>
 
@@ -66,17 +66,17 @@ export function LandingPageDark() {
               <div className="bg-gray-800 p-6 rounded-lg">
                 <h3 className="text-2xl font-semibold mb-4 text-green-300">Find Agricultural Jobs</h3>
                 <p className="mb-4 text-gray-300">Discover opportunities in the agricultural sector, from seasonal work to permanent positions.</p>
-                <Button variant="outline" className="text-green-400 border-green-400 hover:bg-green-400 hover:text-gray-900">Search Jobs</Button>
+                <Button variant="outline" className="text-green-400 border-green-400 hover:bg-green-400 hover:text-gray-900"><Link href="/login">Search Jobs</Link></Button>
               </div>
               <div className="bg-gray-800 p-6 rounded-lg">
                 <h3 className="text-2xl font-semibold mb-4 text-green-300">Hire Agricultural Labor</h3>
                 <p className="mb-4 text-gray-300">Find skilled workers for your farm or agricultural business quickly and efficiently.</p>
-                <Button variant="outline" className="text-green-400 border-green-400 hover:bg-green-400 hover:text-gray-900">Post a Job</Button>
+                <Button variant="outline" className="text-green-400 border-green-400 hover:bg-green-400 hover:text-gray-900"><Link href="/login">Post a Job</Link></Button>
               </div>
               <div className="bg-gray-800 p-6 rounded-lg">
                 <h3 className="text-2xl font-semibold mb-4 text-green-300">Buy & Sell Products</h3>
                 <p className="mb-4 text-gray-300">Trade agricultural products in our secure and user-friendly online marketplace.</p>
-                <Button variant="outline" className="text-green-400 border-green-400 hover:bg-green-400 hover:text-gray-900">Visit Marketplace</Button>
+                <Button variant="outline" className="text-green-400 border-green-400 hover:bg-green-400 hover:text-gray-900"><Link href="/signup">Visit Marketplace</Link></Button>
               </div>
             </div>
           </div>
@@ -92,7 +92,7 @@ export function LandingPageDark() {
               <p className="text-lg mb-4 text-gray-300">
                 Our mission is to empower agricultural communities by providing easy access to opportunities, resources, and markets. We believe in sustainable practices and fostering connections that drive the industry forward.
               </p>
-              <Button className="bg-green-500 hover:bg-green-400 text-gray-900">Learn More About Us</Button>
+              <Button className="bg-green-500 hover:bg-green-400 text-gray-900"><Link href="/about"></Link></Button>
             </div>
           </div>
         </section>
@@ -102,15 +102,15 @@ export function LandingPageDark() {
             <h2 className="text-3xl font-bold text-center mb-12 text-green-400">What Our Users Say</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-gray-700 p-6 rounded-lg">
-                <p className="italic mb-4 text-gray-300">"ACTIVE-B helped me find the perfect job on a local organic farm. The platform is easy to use and full of opportunities!"</p>
+                <p className="italic mb-4 text-gray-300">ACTIVE-B helped me find the perfect job on a local organic farm. The platform is easy to use and full of opportunities!</p>
                 <p className="font-semibold text-green-300">- Sarah Johnson, Farm Worker</p>
               </div>
               <div className="bg-gray-700 p-6 rounded-lg">
-                <p className="italic mb-4 text-gray-300">"As a farm owner, I've found reliable workers through ACTIVE-B. It's streamlined our hiring process significantly."</p>
+                <p className="italic mb-4 text-gray-300">As a farm owner, I have found reliable workers through ACTIVE-B. It streamlined our hiring process significantly.</p>
                 <p className="font-semibold text-green-300">- Michael Brown, Farm Owner</p>
               </div>
               <div className="bg-gray-700 p-6 rounded-lg">
-                <p className="italic mb-4 text-gray-300">"The marketplace on ACTIVE-B has expanded my customer base. It's a game-changer for small-scale producers like me."</p>
+                <p className="italic mb-4 text-gray-300">The marketplace on ACTIVE-B has expanded my customer base. It is a game-changer for small-scale producers like me.</p>
                 <p className="font-semibold text-green-300">- Emily Chen, Organic Farmer</p>
               </div>
             </div>
@@ -127,7 +127,7 @@ export function LandingPageDark() {
                   <Input type="text" placeholder="Your Name" className="bg-gray-800 text-gray-100 border-gray-700" />
                   <Input type="email" placeholder="Your Email" className="bg-gray-800 text-gray-100 border-gray-700" />
                   <Textarea placeholder="Your Message" className="bg-gray-800 text-gray-100 border-gray-700" />
-                  <Button className="bg-green-500 hover:bg-green-400 text-gray-900 w-full">Send Message</Button>
+                  <Button className="bg-green-500 hover:bg-green-400 text-gray-900 w-full"><Link href="/contact">Send Message</Link></Button>
                 </form>
               </div>
               <div>
@@ -153,10 +153,10 @@ export function LandingPageDark() {
             <div>
               <h3 className="text-lg font-semibold mb-4 text-green-400">Quick Links</h3>
               <ul className="space-y-2 text-sm">
-                <li><Link href="#" className="text-gray-300 hover:text-green-400">Home</Link></li>
-                <li><Link href="#" className="text-gray-300 hover:text-green-400">About Us</Link></li>
-                <li><Link href="#" className="text-gray-300 hover:text-green-400">Services</Link></li>
-                <li><Link href="#" className="text-gray-300 hover:text-green-400">Contact</Link></li>
+                <li><Link href="/app" className="text-gray-300 hover:text-green-400">Home</Link></li>
+                <li><Link href="/about" className="text-gray-300 hover:text-green-400">About Us</Link></li>
+                <li><Link href="/services-page-dark" className="text-gray-300 hover:text-green-400">Services</Link></li>
+                <li><Link href="/contact" className="text-gray-300 hover:text-green-400">Contact</Link></li>
               </ul>
             </div>
             <div>

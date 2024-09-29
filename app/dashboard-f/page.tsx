@@ -1,11 +1,11 @@
 // import Image from "next/image";
-import { LandingPageDark } from "../components/landing-page-dark";
+import {FarmerDashboardComponent} from "@/components/farmer-dashboard";
 
 
 export default function Home() {
   return (
     <div className="">
-          <LandingPageDark />
+          <FarmerDashboardComponent />
     </div>
       );
 }

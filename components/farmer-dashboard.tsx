@@ -1,103 +1,93 @@
-'use client'
+"use client"
 
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
-import LayoutDarkGreen from './layout-dark-green'
+import { ArrowUpIcon, ArrowDownIcon, TrendingUpIcon, /*LeafIcon, DropletIcon, SunIcon*/ } from 'lucide-react'
+import { LayoutDarkGreenComponent } from './layout-dark-green'
 
-const salesData = [
-  { month: 'Jan', productSales: 4000, rentalIncome: 2400 },
-  { month: 'Feb', productSales: 3000, rentalIncome: 1398 },
-  { month: 'Mar', productSales: 2000, rentalIncome: 9800 },
-  { month: 'Apr', productSales: 2780, rentalIncome: 3908 },
-  { month: 'May', productSales: 1890, rentalIncome: 4800 },
-  { month: 'Jun', productSales: 2390, rentalIncome: 3800 },
-]
+// ... (previous imports and code)
 
 export function FarmerDashboardComponent() {
-  const [earnings, setEarnings] = React.useState(0)
-  const targetEarnings = 10000
-
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      setEarnings(prev => Math.min(prev + 100, targetEarnings))
-    }, 50)
-    return () => clearInterval(interval)
-  }, [])
-
   return (
-    <LayoutDarkGreen>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="space-y-6"
-      >
-        <h1 className="text-3xl font-bold text-green-300">Farmer Dashboard</h1>
-
+    <LayoutDarkGreenComponent>
+      <div className="container mx-auto px-4 py-8">
         <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
         >
-          <Card className="bg-gray-800 border-green-500">
+          <h1 className="text-3xl font-bold text-green-300 mb-8">Farmer Dashboard</h1>
+
+          {/* Farm Performance Overview */}
+          <Card className="bg-gray-800 border-green-500 mb-8">
             <CardHeader>
-              <CardTitle className="text-green-300">Earnings Progress</CardTitle>
+              <CardTitle className="text-green-300">Farm Performance Overview</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="space-y-2">
-                <div className="flex justify-between">
-                  <span className="text-green-400">Current Earnings</span>
-                  <span className="text-green-300">${earnings.toFixed(2)}</span>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="flex items-center">
+                  <ArrowUpIcon className="text-green-500 mr-2" />
+                  <div>
+                    <p className="text-green-300">Crop Yield</p>
+                    <p className="text-2xl font-bold text-green-400">92%</p>
+                  </div>
                 </div>
-                <motion.div
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: 1 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <Progress 
-                    value={(earnings / targetEarnings) * 100} 
-                    className="h-2 bg-gray-700" 
-                    indicatorClassName="bg-green-500" 
-                  />
-                </motion.div>
-                <div className="text-right text-green-400">
-                  Target: ${targetEarnings.toFixed(2)}
+                <div className="flex items-center">
+                  <ArrowDownIcon className="text-red-500 mr-2" />
+                  <div>
+                    <p className="text-green-300">Water Usage</p>
+                    <p className="text-2xl font-bold text-green-400">-15%</p>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <TrendingUpIcon className="text-green-500 mr-2" />
+                  <div>
+                    <p className="text-green-300">Profit Margin</p>
+                    <p className="text-2xl font-bold text-green-400">+8%</p>
+                  </div>
                 </div>
               </div>
             </CardContent>
           </Card>
-        </motion.div>
 
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.4 }}
-        >
-          <Card className="bg-gray-800 border-green-500">
+          {/* Crop Health Monitoring */}
+          <Card className="bg-gray-800 border-green-500 mb-8">
             <CardHeader>
-              <CardTitle className="text-green-300">Sales and Rental Income</CardTitle>
+              <CardTitle className="text-green-300">Crop Health Monitoring</CardTitle>
             </CardHeader>
             <CardContent>
-              <ResponsiveContainer width="100%" height={300}>
-                <LineChart data={salesData}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#2D3748" />
-                  <XAxis dataKey="month" stroke="#68D391" />
-                  <YAxis stroke="#68D391" />
-                  <Tooltip 
-                    contentStyle={{ backgroundColor: '#1A202C', border: '1px solid #2D3748' }}
-                    labelStyle={{ color: '#68D391' }}
-                  />
-                  <Line type="monotone" dataKey="productSales" stroke="#38A169" strokeWidth={2} />
-                  <Line type="monotone" dataKey="rentalIncome" stroke="#4299E1" strokeWidth={2} />
-                </LineChart>
-              </ResponsiveContainer>
+              <div className="space-y-4">
+                <div>
+                  <div className="flex justify-between mb-1">
+                    <span className="text-green-300">Soil Nutrients</span>
+                    <span className="text-green-400">75%</span>
+                  </div>
+                  <Progress value={75} className="h-2 bg-gray-700" />
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1">
+                    <span className="text-green-300">Water Levels</span>
+                    <span className="text-green-400">60%</span>
+                  </div>
+                  <Progress value={60} className="h-2 bg-gray-700" />
+                </div>
+                <div>
+                  <div className="flex justify-between mb-1">
+                    <span className="text-green-300">Sunlight Exposure</span>
+                    <span className="text-green-400">90%</span>
+                  </div>
+                  <Progress value={90} className="h-2 bg-gray-700" />
+                </div>
+              </div>
             </CardContent>
           </Card>
+
+          {/* ... (rest of the component) */}
+
         </motion.div>
-      </motion.div>
-    </LayoutDarkGreen>
+      </div>
+    </LayoutDarkGreenComponent>
   )
 }

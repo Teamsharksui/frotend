@@ -3,20 +3,20 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { SeedlingIcon, LeafIcon, TreeIcon } from 'lucide-react'
-import LayoutDarkGreen from './layout-dark-green'
+import { Sprout, Leaf, TreePine } from 'lucide-react'
+import { LayoutDarkGreenComponent } from './layout-dark-green'
 
 const investmentHistory = [
-  { id: 1, project: 'Vertical Farming Startup', amount: 50000, date: '2023-01-15', status: 'Completed', icon: SeedlingIcon },
-  { id: 2, project: 'Organic Fertilizer Production', amount: 75000, date: '2023-03-22', status: 'Ongoing', icon: LeafIcon },
-  { id: 3, project: 'Smart Irrigation System', amount: 100000, date: '2023-05-10', status: 'Completed', icon: TreeIcon },
-  { id: 4, project: 'Farm-to-Table Marketplace', amount: 60000, date: '2023-07-05', status: 'Ongoing', icon: LeafIcon },
-  { id: 5, project: 'Precision Agriculture Drones', amount: 120000, date: '2023-09-18', status: 'Completed', icon: TreeIcon },
+  { id: 1, project: 'Vertical Farming Startup', amount: 50000, date: '2023-01-15', status: 'Completed', icon: Sprout },
+  { id: 2, project: 'Organic Fertilizer Production', amount: 75000, date: '2023-03-22', status: 'Ongoing', icon: Leaf },
+  { id: 3, project: 'Smart Irrigation System', amount: 100000, date: '2023-05-10', status: 'Completed', icon: TreePine },
+  { id: 4, project: 'Farm-to-Table Marketplace', amount: 60000, date: '2023-07-05', status: 'Ongoing', icon: Leaf },
+  { id: 5, project: 'Precision Agriculture Drones', amount: 120000, date: '2023-09-18', status: 'Completed', icon: TreePine },
 ]
 
 export function InvestmentHistoryComponent() {
   return (
-    <LayoutDarkGreen>
+    <LayoutDarkGreenComponent>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -97,6 +97,6 @@ export function InvestmentHistoryComponent() {
           </Card>
         </motion.div>
       </motion.div>
-    </LayoutDarkGreen>
+    </LayoutDarkGreenComponent>
   )
 }

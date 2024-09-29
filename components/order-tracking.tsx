@@ -4,7 +4,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckIcon, TruckIcon, PackageIcon, DollarSignIcon } from 'lucide-react'
-import LayoutDarkGreen from './layout-dark-green'
+import { LayoutDarkGreenComponent } from './layout-dark-green'
 
 const orders = [
   { id: 1, product: 'Organic Apples', quantity: 50, status: 'Delivered', stages: [true, true, true, true] },
@@ -22,7 +22,7 @@ const stages = [
 
 export function OrderTrackingComponent() {
   return (
-    <LayoutDarkGreen>
+    <LayoutDarkGreenComponent>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -71,6 +71,6 @@ export function OrderTrackingComponent() {
           </motion.div>
         ))}
       </motion.div>
-    </LayoutDarkGreen>
+    </LayoutDarkGreenComponent>
   )
 }

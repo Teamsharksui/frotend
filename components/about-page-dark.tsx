@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import LayoutDark from './layout-dark'
+import { LayoutDark } from './layout-dark'
 
 export function AboutPageDarkComponent() {
   return (
