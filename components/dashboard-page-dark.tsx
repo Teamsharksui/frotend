@@ -31,7 +31,7 @@ const appSections = [
   },
   { 
     title: 'Financial Overview', 
-    description: 'Track your earnings, expenses, and manage your ACTIVE-B wallet.',
+    description: 'Track your earnings, expenses, and manage your ACTIV-B wallet.',
     href: '/wallet'
   },
   { 

@@ -100,7 +100,7 @@ export function ServicesPageDark() {
           <div className="text-center">
             <h2 className="text-3xl font-semibold mb-4">Ready to Get Started?</h2>
             <p className="text-green-400 mb-8">
-              Join ACTIVE-B today and transform your agricultural business with our comprehensive suite of services.
+              Join ACTIV-B today and transform your agricultural business with our comprehensive suite of services.
             </p>
             <Button className="bg-green-600 hover:bg-green-700 text-white text-lg px-8 py-3">
               Sign Up Now

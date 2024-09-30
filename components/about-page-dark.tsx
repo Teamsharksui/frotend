@@ -10,13 +10,13 @@ export function AboutPageDarkComponent() {
     <LayoutDark>
       <div className="min-h-screen bg-gray-900 text-green-300 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl font-bold text-center mb-12">About ACTIVE-B</h1>
+          <h1 className="text-4xl font-bold text-center mb-12">About ACTIV-B</h1>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <h2 className="text-3xl font-semibold mb-4">Our Mission</h2>
               <p className="text-green-400 mb-4">
-                ACTIVE-B is dedicated to revolutionizing the agricultural industry by connecting farmers, suppliers, and traders on a single platform. Our mission is to promote sustainable farming practices, facilitate efficient resource management, and empower agricultural communities worldwide.
+                ACTIV-B is dedicated to revolutionizing the agricultural industry by connecting farmers, suppliers, and traders on a single platform. Our mission is to promote sustainable farming practices, facilitate efficient resource management, and empower agricultural communities worldwide.
               </p>
               <p className="text-green-400">
                 We strive to create a more transparent, efficient, and sustainable agricultural ecosystem that benefits all stakeholders, from small-scale farmers to large agricultural enterprises.
@@ -69,7 +69,7 @@ export function AboutPageDarkComponent() {
           <div className="text-center">
             <h2 className="text-3xl font-semibold mb-4">Our Team</h2>
             <p className="text-green-400 mb-8">
-              ACTIVE-B is powered by a diverse team of experts in agriculture, technology, and business. Our combined expertise drives our mission forward.
+              ACTIV-B is powered by a diverse team of experts in agriculture, technology, and business. Our combined expertise drives our mission forward.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[1, 2, 3, 4].map((member) => (

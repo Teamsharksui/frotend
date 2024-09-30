@@ -54,7 +54,7 @@ export function ContactPageDarkComponent() {
               <div className="relative h-64 mb-4">
                 <Image
                   src="/placeholder.svg?height=300&width=400"
-                  alt="ACTIVE-B office location"
+                  alt="ACTIV-B office location"
                   layout="fill"
                   objectFit="cover"
                   className="rounded-lg"
@@ -67,7 +67,7 @@ export function ContactPageDarkComponent() {
               </address>
               <div className="space-y-2">
                 <p><strong className="text-green-300">Phone:</strong> <a href="tel:+11234567890" className="text-green-400 hover:text-green-300">+1 (123) 456-7890</a></p>
-                <p><strong className="text-green-300">Email:</strong> <a href="mailto:info@active-b.com" className="text-green-400 hover:text-green-300">info@active-b.com</a></p>
+                <p><strong className="text-green-300">Email:</strong> <a href="mailto:info@ACTIV-B.com" className="text-green-400 hover:text-green-300">info@ACTIV-B.com</a></p>
               </div>
             </div>
           </div>

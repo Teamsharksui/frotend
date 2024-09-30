@@ -13,7 +13,7 @@ export function LandingPageDark() {
     <div className="flex flex-col min-h-screen bg-gray-900 text-gray-100">
       <header className="bg-gray-800 py-4">
         <div className="container mx-auto px-4 flex justify-between items-center">
-          <Link href="/landing-page-dark" className="text-2xl font-bold text-green-400">ACTIVE-B</Link>
+          <Link href="/landing-page-dark" className="text-2xl font-bold text-green-400">ACTIV-B</Link>
           <nav className="hidden md:flex space-x-4">
             <Link href="#features" className="hover:text-green-400">Features</Link>
             <Link href='/services-page-dark' className="hover:text-green-400">Services</Link>
@@ -38,7 +38,7 @@ export function LandingPageDark() {
 
         <section id="features" className="py-16 bg-gray-800">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12 text-green-400">Why Choose ACTIVE-B?</h2>
+            <h2 className="text-3xl font-bold text-center mb-12 text-green-400">Why Choose ACTIV-B?</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-gray-700 p-6 rounded-lg shadow-md">
                 <Leaf className="w-12 h-12 text-green-400 mb-4" />
@@ -85,9 +85,9 @@ export function LandingPageDark() {
         <section id="about" className="py-16 bg-[url('/placeholder.svg?height=600&width=1200')] bg-cover bg-center text-white">
           <div className="container mx-auto px-4">
             <div className="bg-gray-900 bg-opacity-80 p-8 rounded-lg">
-              <h2 className="text-3xl font-bold mb-4 text-green-400">About ACTIVE-B</h2>
+              <h2 className="text-3xl font-bold mb-4 text-green-400">About ACTIV-B</h2>
               <p className="text-lg mb-4 text-gray-300">
-                ACTIVE-B is a comprehensive platform designed to revolutionize the agricultural industry. We bring together job seekers, employers, and traders in one unified ecosystem.
+                ACTIV-B is a comprehensive platform designed to revolutionize the agricultural industry. We bring together job seekers, employers, and traders in one unified ecosystem.
               </p>
               <p className="text-lg mb-4 text-gray-300">
                 Our mission is to empower agricultural communities by providing easy access to opportunities, resources, and markets. We believe in sustainable practices and fostering connections that drive the industry forward.
@@ -102,15 +102,15 @@ export function LandingPageDark() {
             <h2 className="text-3xl font-bold text-center mb-12 text-green-400">What Our Users Say</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-gray-700 p-6 rounded-lg">
-                <p className="italic mb-4 text-gray-300">ACTIVE-B helped me find the perfect job on a local organic farm. The platform is easy to use and full of opportunities!</p>
+                <p className="italic mb-4 text-gray-300">ACTIV-B helped me find the perfect job on a local organic farm. The platform is easy to use and full of opportunities!</p>
                 <p className="font-semibold text-green-300">- Sarah Johnson, Farm Worker</p>
               </div>
               <div className="bg-gray-700 p-6 rounded-lg">
-                <p className="italic mb-4 text-gray-300">As a farm owner, I have found reliable workers through ACTIVE-B. It streamlined our hiring process significantly.</p>
+                <p className="italic mb-4 text-gray-300">As a farm owner, I have found reliable workers through ACTIV-B. It streamlined our hiring process significantly.</p>
                 <p className="font-semibold text-green-300">- Michael Brown, Farm Owner</p>
               </div>
               <div className="bg-gray-700 p-6 rounded-lg">
-                <p className="italic mb-4 text-gray-300">The marketplace on ACTIVE-B has expanded my customer base. It is a game-changer for small-scale producers like me.</p>
+                <p className="italic mb-4 text-gray-300">The marketplace on ACTIV-B has expanded my customer base. It is a game-changer for small-scale producers like me.</p>
                 <p className="font-semibold text-green-300">- Emily Chen, Organic Farmer</p>
               </div>
             </div>
@@ -134,7 +134,7 @@ export function LandingPageDark() {
                 <h3 className="text-xl font-semibold mb-4 text-green-300">Contact Information</h3>
                 <div className="space-y-2 text-gray-300">
                   <p className="flex items-center"><Phone className="w-5 h-5 mr-2 text-green-400" /> +1 (555) 123-4567</p>
-                  <p className="flex items-center"><Mail className="w-5 h-5 mr-2 text-green-400" /> info@active-b.com</p>
+                  <p className="flex items-center"><Mail className="w-5 h-5 mr-2 text-green-400" /> info@ACTIV-B.com</p>
                   <p className="flex items-center"><MapPin className="w-5 h-5 mr-2 text-green-400" /> 123 Farm Road, Agritown, AG 12345</p>
                 </div>
               </div>
@@ -147,7 +147,7 @@ export function LandingPageDark() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-lg font-semibold mb-4 text-green-400">ACTIVE-B</h3>
+              <h3 className="text-lg font-semibold mb-4 text-green-400">ACTIV-B</h3>
               <p className="text-sm text-gray-300">Connecting the agricultural community since 2023.</p>
             </div>
             <div>
@@ -189,7 +189,7 @@ export function LandingPageDark() {
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-700 text-center text-sm text-gray-400">
-            <p>&copy; 2023 ACTIVE-B. All rights reserved.</p>
+            <p>&copy; 2023 ACTIV-B. All rights reserved.</p>
           </div>
         </div>
       </footer>

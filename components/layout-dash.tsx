@@ -21,9 +21,9 @@ export function LayoutDarkDash({ children }: LayoutDarkProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-lg font-semibold mb-4">About ACTIVE-B</h3>
+              <h3 className="text-lg font-semibold mb-4">About ACTIV-B</h3>
               <p className="text-sm">
-                ACTIVE-B is your one-stop platform for all things agriculture. We connect farmers, laborers, and traders, 
+                ACTIV-B is your one-stop platform for all things agriculture. We connect farmers, laborers, and traders, 
                 fostering a vibrant community dedicated to sustainable farming practices and efficient resource management.
               </p>
             </div>
@@ -61,7 +61,7 @@ export function LayoutDarkDash({ children }: LayoutDarkProps) {
             </div>
           </div>
           <div className="mt-8 border-t border-gray-700 pt-8 flex justify-between items-center">
-            <p className="text-sm">&copy; 2023 ACTIVE-B. All rights reserved.</p>
+            <p className="text-sm">&copy; 2023 ACTIV-B. All rights reserved.</p>
             <div className="flex space-x-4">
               <Link href="/privacy" className="text-sm hover:text-green-200">Privacy Policy</Link>
               <Link href="/terms" className="text-sm hover:text-green-200">Terms of Service</Link>
