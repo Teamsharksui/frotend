@@ -40,7 +40,7 @@ export function Marketplace() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const [products, setProducts] = useState<Product[]>(initialProducts)
   const [newProduct, setNewProduct] = useState<Omit<Product, 'id'>>({ name: '', price: 0, unit: '', image: '/placeholder.svg?height=100&width=100', description: '' })
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
+  // const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
 
 
   const user = {
