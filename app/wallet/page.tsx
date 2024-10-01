@@ -1,11 +1,11 @@
 // import Image from "next/image";
-import {DashboardPageDark} from "@/components/dashboard-page-dark";
+import {Wallet} from "@/components/wallet";
 
 
 export default function Home() {
   return (
     <div className="">
-          <DashboardPageDark />
+          <Wallet />
     </div>
       );
 }

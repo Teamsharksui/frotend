@@ -115,7 +115,7 @@ export function TransactionMonitoringComponent() {
                       <TableCell className="text-green-300">{transaction.date}</TableCell>
                       <TableCell className="text-green-300">{transaction.type}</TableCell>
                       <TableCell className="text-green-300">{transaction.product}</TableCell>
-                      <TableCell className="text-green-300">${transaction.amount}</TableCell>
+                      <TableCell className="text-green-300">💧{transaction.amount}</TableCell>
                       <TableCell className="text-green-300">{transaction.status}</TableCell>
                     </TableRow>
                   ))}

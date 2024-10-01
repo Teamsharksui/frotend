@@ -26,7 +26,7 @@ export function LayoutDarkGreenComponent({ children }: LayoutDarkGreenProps) {
     <div className="flex h-screen bg-gradient-to-br from-gray-900 to-green-900 text-green-100">
       {/* Sidebar for desktop */}
       <motion.nav
-        className="hidden md:flex flex-col w-16 hover:w-64 transition-all duration-300 ease-in-out bg-gray-800 p-4 overflow-hidden"
+        className="hidden md:flex flex-col w-60 hover:w-64 transition-all duration-300 ease-in-out bg-gray-800 p-4 "
         animate={{ width: isSidebarOpen ? 256 : 64 }}
       >
         {navItems.map((item) => (

@@ -22,7 +22,7 @@ export function SignupPageDark() {
 
   return (
     <LayoutDark>
-      <div className="flex items-center justify-center min-h-screen bg-gray-900 py-12">
+      <div className="flex  justify-center bg-gray-900 py-8">
         <Card className="w-full max-w-4xl bg-gray-800 border-green-700">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-green-300">Sign up for ACTIV-B</CardTitle>
