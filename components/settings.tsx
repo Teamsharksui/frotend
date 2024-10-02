@@ -1,5 +1,5 @@
 "use client"
-
+import Image from 'next/image'
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -36,8 +36,11 @@ export function Settings() {
       {/* Navigation Bar */}
       <nav className="bg-gray-800 p-4 sticky top-0 z-10">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Link href="/landing-page-dark" className="text-2xl font-bold text-green-400">ACTIV-B</Link>
-          <div className="hidden md:flex items-center space-x-4">
+          <div className=" md:flex items-center">
+            <Image src="/images/suiii.png" alt="sui" width={150} height={100} />
+            <Link href="/landing-page-dark" className="text-2xl font-bold text-green-400">ACTIV-B</Link>
+          </div>          
+        <div className="hidden md:flex items-center space-x-4">
             {navItems.map((item) => (
               <Link key={item.name} href={item.href}>
                 <Button variant="ghost" className="text-green-300 hover:text-green-100 hover:bg-gray-700">

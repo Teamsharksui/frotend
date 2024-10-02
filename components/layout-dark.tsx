@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button"
 import React from 'react'
 import Link from 'next/link'
-// import Image from 'next/image'
+import Image from 'next/image'
 // import { Button } from "@/components/ui/button"
 
 interface LayoutDarkProps {
@@ -14,8 +14,10 @@ export function LayoutDark({ children }: LayoutDarkProps) {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black flex flex-col">
       <header className="bg-gray-800 py-4">
         <div className="container mx-auto px-4 flex justify-between items-center">
-          <Link href="/landing-page-dark" className="text-2xl font-bold text-green-400">ACTIV-B</Link>
-          <nav className="hidden md:flex space-x-4">
+          <div className=" md:flex items-center">
+              <Image src="/images/suiii.png" alt="sui" width={150} height={100} />
+              <Link href="/landing-page-dark" className="text-2xl font-bold text-green-400">ACTIV-B</Link>
+            </div>          <nav className="hidden md:flex space-x-4">
             <Link href="#features" className="hover:text-green-400">Features</Link>
             <Link href='/services-page-dark' className="hover:text-green-400">Services</Link>
             <Link href="/about" className="hover:text-green-400">About</Link>

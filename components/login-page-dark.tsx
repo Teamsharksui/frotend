@@ -16,7 +16,7 @@ export function LoginPageDarkComponent() {
 
   return (
     <LayoutDark>
-      <div className="flex items-center justify-center py-12 bg-gray-900">
+      <div className="flex items-center justify-center py-20 bg-gray-900">
         <Card className="w-full max-w-md bg-gray-800 border-green-700">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-green-300">Login to ACTIV-B</CardTitle>

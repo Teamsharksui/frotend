@@ -1,5 +1,5 @@
 'use client'
-
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -11,9 +11,12 @@ import Link from "next/link"
 export function LandingPageDark() {
   return (
     <div className="flex flex-col min-h-screen bg-gray-900 text-gray-100">
-      <header className="bg-gray-800 py-4">
+      <header className="bg-gray-800">
         <div className="container mx-auto px-4 flex justify-between items-center">
-          <Link href="/landing-page-dark" className="text-2xl font-bold text-green-400">ACTIV-B</Link>
+          <div className=" md:flex items-center">
+            <Image src="/images/suiii.png" alt="sui" width={150} height={100} />
+            <Link href="/landing-page-dark" className="text-2xl font-bold text-green-400">ACTIV-B</Link>
+          </div>
           <nav className="hidden md:flex space-x-4">
             <Link href="#features" className="hover:text-green-400">Features</Link>
             <Link href='/services-page-dark' className="hover:text-green-400">Services</Link>
