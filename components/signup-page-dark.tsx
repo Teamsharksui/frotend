@@ -156,7 +156,7 @@ export function SignupPageDark() {
                     </Button>
                   ) : (
                     <Button type="submit" className="bg-green-600 hover:bg-green-700 text-white">
-                      Complete Sign Up
+                      <Link href="/dashboard-p">Log In</Link>
                     </Button>
                   )}
                 </div>
